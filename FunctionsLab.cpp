@@ -33,8 +33,14 @@ int locateSmallest(int array[], int start, int end){
 //     an int which is the starting index of search,
 //     an int which is the ending point of searchspace
 // function: Search in the array from given start to end index and replace the given target value with 1000
-void replaceVariable() {
-	return;
+void replaceVariable(int* array, int target, int start, int end) {
+	for (int i = start; i <= end; i++){
+		if (array[i] == target){
+			array[i] = 1000;
+			break;
+		}
+	}
+
 }
 
 
@@ -42,8 +48,12 @@ void replaceVariable() {
 //write a function called printArray to print out the elements of the given array
 //output: nothing
 //input: the array of integers and its size
-void printArray() {
-	return;
+void printArray(int array[], int end) {
+	for (int i = 0; i <= end; i++) {
+		cout << array[i] << " ";
+	}
+	cout << end;
+	
 }
 
 
@@ -62,5 +72,12 @@ void printArray() {
 
 
 int sumOdds(int array[], int start, int end){
-	return -1;
+	int sum = 0;
+	int check = 0;
+	for(int i = start; i <= end; i++){
+		check = array[i];
+		if (check % 2 != 0)
+		sum += check;
+	}
+	return sum;
 }
