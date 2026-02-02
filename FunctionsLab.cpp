@@ -33,11 +33,12 @@ int locateSmallest(int array[], int start, int end){
 //     an int which is the starting index of search,
 //     an int which is the ending point of searchspace
 // function: Search in the array from given start to end index and replace the given target value with 1000
-void replaceVariable(int* array, int target, int start, int end) {
+void replaceVariable(int array[], int target, int start, int end) {
 	for (int i = start; i <= end; i++){
-		if (array[i] == target){
+		int check = 0;
+		check = array[i];
+		if (check == target){
 			array[i] = 1000;
-			break;
 		}
 	}
 
